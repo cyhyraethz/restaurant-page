@@ -1,6 +1,6 @@
 body {
   color: #cfcfcf;
-  background-color: #151515;
+  background-color: #191919;
 }
 
 #topnav ul {
@@ -27,4 +27,8 @@ body {
 #topnav ul li a.active {
   background-color: #04aa6d;
   color: white;
+}
+
+#dining {
+  width: 100%;
 }
