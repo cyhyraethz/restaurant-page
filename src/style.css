@@ -3,16 +3,16 @@ body {
   background-color: #191919;
 }
 
-#topnav ul {
+#topNav ul {
   background-color: #333;
   text-align: center;
 }
 
-#topnav ul li {
+#topNav ul li {
   display: inline;
 }
 
-#topnav ul li a {
+#topNav ul li a {
   display: inline-block;
   color: #f2f2f2;
   padding: 14px 16px;
@@ -20,13 +20,22 @@ body {
   font-size: 17px;
 }
 
-#topnav ul li a:hover {
+#topNav ul li a:hover {
   background-color: #555;
 }
 
-#topnav ul li a.active {
+#topNav ul li a.active {
   background-color: #04aa6d;
   color: white;
+}
+
+#restaurantName,
+#restaurantHeadline {
+  text-align: center;
+}
+
+#restaurantDescription {
+  margin: 0 8%;
 }
 
 #dining {
