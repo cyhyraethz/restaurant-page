@@ -1,14 +1,10 @@
-import diningSrc from './dining.jpg';
+import loadHomeTab from './home-tab.js';
 
 export default function initialPageLoad() {
-  const content = document.getElementById('content');
+  const navigation = document.getElementById('navigation');
 
   const topNav = document.createElement('nav');
   const navList = document.createElement('ul');
-  const restaurantName = document.createElement('h1');
-  const dining = document.createElement('img');
-  const restaurantHeadline = document.createElement('h1');
-  const restaurantDescription = document.createElement('p');
 
   const home = document.createElement('a');
   const menu = document.createElement('a');
@@ -17,24 +13,35 @@ export default function initialPageLoad() {
   const careers = document.createElement('a');
   const catering = document.createElement('a');
 
-  home.className = 'active';
+  home.id = 'home';
   home.href = '#home';
   home.innerText = 'Home';
+  home.addEventListener('click', loadHomeTab);
 
+  menu.id = 'menu';
   menu.href = '#menu';
   menu.innerText = 'Menu';
+  // menu.addEventListener('click', loadMenuTab);
 
+  locations.id = 'locations';
   locations.href = '#locations';
   locations.innerText = 'Locations';
+  // locations.addEventListener('click', loadLocationsTab);
 
+  story.id = 'story';
   story.href = '#story';
   story.innerText = 'Story';
+  // story.addEventListener('click', loadStoryTab);
 
+  careers.id = 'careers';
   careers.href = '#careers';
   careers.innerText = 'Careers';
+  // careers.addEventListener('click', loadCareersTab);
 
+  catering.id = 'catering';
   catering.href = '#catering';
   catering.innerText = 'Catering';
+  // catering.addEventListener('click', loadCateringTab);
 
   const anchor = [home, menu, locations, story, careers, catering];
 
@@ -46,26 +53,9 @@ export default function initialPageLoad() {
 
   topNav.id = 'topNav';
   navList.id = 'navList';
-  restaurantName.id = 'restaurantName';
-  restaurantName.innerText = 'The Green Sprout Restaurant';
-  dining.id = 'dining';
-  dining.src = diningSrc;
-  dining.alt = 'People enjoying food in the dining area';
-  restaurantHeadline.id = 'restaurantHeadline';
-  restaurantHeadline.innerText =
-    'Real Organic Cuisine. Conscientiously Prepared.';
-  restaurantDescription.id = 'restaurantDescription';
-  restaurantDescription.innerText =
-    'We create flavor-sophisticated scratch-made food using thoughtfully\
-    chosen ingredients from the earth. Every dish reflects a multicultural\
-    influence and features many of the vegetables, spices, and techniques\
-    that truly inspire us to eat and serve beautiful food. Vegan, or not,\
-    we promise you will enjoy your experience.';
 
   topNav.appendChild(navList);
-  content.appendChild(topNav);
-  content.appendChild(restaurantName);
-  content.appendChild(dining);
-  content.appendChild(restaurantHeadline);
-  content.appendChild(restaurantDescription);
+  navigation.appendChild(topNav);
+
+  loadHomeTab();
 }
