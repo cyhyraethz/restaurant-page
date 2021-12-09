@@ -1,4 +1,5 @@
 import loadHomeTab from './home-tab.js';
+import loadMenuTab from './menu-tab.js';
 
 export default function initialPageLoad() {
   const navigation = document.getElementById('navigation');
@@ -21,7 +22,7 @@ export default function initialPageLoad() {
   menu.id = 'menu';
   menu.href = '#menu';
   menu.innerText = 'Menu';
-  // menu.addEventListener('click', loadMenuTab);
+  menu.addEventListener('click', loadMenuTab);
 
   locations.id = 'locations';
   locations.href = '#locations';

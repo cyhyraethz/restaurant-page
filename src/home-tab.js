@@ -1,25 +1,26 @@
-import diningSrc from './dining.jpg';
+import { Dining } from './images';
 
 export default function loadHomeTab() {
-  const home = document.getElementById('home');
+  const homeTab = document.getElementById('home');
   const content = document.getElementById('content');
   const active = document.getElementsByClassName('active');
 
   const restaurantName = document.createElement('h1');
-  const dining = document.createElement('img');
+  const diningImg = document.createElement('img');
   const restaurantHeadline = document.createElement('h1');
   const restaurantDescription = document.createElement('p');
 
+  for (let e of active) {
+    e.classList.remove('active');
+  }
   content.innerHTML = '';
-
-  home.className = 'active';
-  active.className = 'inactive';
+  homeTab.className = 'active';
 
   restaurantName.id = 'restaurantName';
   restaurantName.innerText = 'The Green Sprout Restaurant';
-  dining.id = 'dining';
-  dining.src = diningSrc;
-  dining.alt = 'People enjoying food in the dining area';
+  diningImg.id = 'diningImg';
+  diningImg.src = Dining;
+  diningImg.alt = 'People enjoying food in the dining area';
   restaurantHeadline.id = 'restaurantHeadline';
   restaurantHeadline.innerText = 'Real Organic Cuisine. Conscientiously Prepared.';
   restaurantDescription.id = 'restaurantDescription';
@@ -31,7 +32,7 @@ export default function loadHomeTab() {
     we promise you will enjoy your experience.';
 
   content.appendChild(restaurantName);
-  content.appendChild(dining);
+  content.appendChild(diningImg);
   content.appendChild(restaurantHeadline);
   content.appendChild(restaurantDescription);
 }
