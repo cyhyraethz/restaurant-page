@@ -5,6 +5,7 @@ export default function loadMenuTab() {
   const content = document.getElementById('content');
   const active = document.getElementsByClassName('active');
 
+  const menuName = document.createElement('h1');
   const menuImg = document.createElement('img');
   const cauliflowerImg = document.createElement('img');
   const oatmealImg = document.createElement('img');
@@ -17,22 +18,27 @@ export default function loadMenuTab() {
   content.innerHTML = '';
   menuTab.className = 'active';
 
+  menuName.id = 'menuName';
+  menuName.innerText = 'Menu';
   menuImg.id = 'menuImg';
   menuImg.src = Menu;
-  menuImg.alt = 'People enjoying food in the dining area';
+  menuImg.alt = 'A spread of various food dishes.';
   cauliflowerImg.id = 'cauliflowerImg';
   cauliflowerImg.src = Cauliflower;
-  cauliflowerImg.alt = 'People enjoying food in the dining area';
+  cauliflowerImg.alt = 'A plate of roasted cauliflower, lentils, and salad.';
   oatmealImg.id = 'oatmealImg';
   oatmealImg.src = Oatmeal;
-  oatmealImg.alt = 'People enjoying food in the dining area';
+  oatmealImg.alt = 'A bowl of oatmeal with berries  and pecans.';
   saladImg.id = 'saladImg';
   saladImg.src = Salad;
-  saladImg.alt = 'People enjoying food in the dining area';
+  saladImg.alt = 'A vegetable salad with lettuce, tomato, and avocado.';
   springRollsImg.id = 'springRollsImg';
   springRollsImg.src = SpringRolls;
-  springRollsImg.alt = 'People enjoying food in the dining area';
+  springRollsImg.alt = 'A dish of spring rolls garnished with lettuce and mint.';
 
+  menuName.classList.add('centered');
+
+  content.appendChild(menuName);
   content.appendChild(menuImg);
   content.appendChild(cauliflowerImg);
   content.appendChild(oatmealImg);
