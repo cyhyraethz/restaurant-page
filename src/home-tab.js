@@ -31,6 +31,7 @@ export default function loadHomeTab() {
     that truly inspire us to eat and serve beautiful food. Vegan, or not,\
     we promise you will enjoy your experience.';
 
+  diningImg.classList.add('fullWidth');
   restaurantHeadline.classList.add('centered');
   restaurantName.classList.add('centered');
 

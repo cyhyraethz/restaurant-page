@@ -58,5 +58,10 @@ export default function initialPageLoad() {
   topNav.appendChild(navList);
   navigation.appendChild(topNav);
 
-  loadHomeTab();
+  // loadHomeTab();
+  loadMenuTab();
+  // loadLocationsTab();
+  // loadStoryTab();
+  // loadCareersTab();
+  // loadCateringTab();
 }
