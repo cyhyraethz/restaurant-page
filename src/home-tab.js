@@ -13,11 +13,17 @@ export default function loadHomeTab() {
 
   restaurantName.id = 'restaurantName';
   restaurantName.innerText = 'The Green Sprout Restaurant';
+  restaurantName.classList.add('centered');
+
   diningImg.id = 'diningImg';
   diningImg.src = Dining;
   diningImg.alt = 'People enjoying food in the dining area';
+  diningImg.classList.add('fullWidth');
+
   restaurantHeadline.id = 'restaurantHeadline';
   restaurantHeadline.innerText = 'Real Organic Cuisine. Conscientiously Prepared.';
+  restaurantHeadline.classList.add('centered');
+
   restaurantDescription.id = 'restaurantDescription';
   restaurantDescription.innerText =
     'We create flavor-sophisticated scratch-made food using thoughtfully\
@@ -25,10 +31,6 @@ export default function loadHomeTab() {
     influence and features many of the vegetables, spices, and techniques\
     that truly inspire us to eat and serve beautiful food. Vegan, or not,\
     we promise you will enjoy your experience.';
-
-  diningImg.classList.add('fullWidth');
-  restaurantHeadline.classList.add('centered');
-  restaurantName.classList.add('centered');
 
   content.appendChild(restaurantName);
   content.appendChild(diningImg);
