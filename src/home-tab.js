@@ -1,22 +1,15 @@
 import { Dining } from './images';
+import { selectNavItem } from './helper.js';
 
 export default function loadHomeTab() {
-  const homeTab = document.getElementById('home');
+  selectNavItem('home');
+
   const content = document.getElementById('content');
-  const active = document.getElementsByClassName('active');
 
   const restaurantName = document.createElement('h1');
   const diningImg = document.createElement('img');
   const restaurantHeadline = document.createElement('h1');
   const restaurantDescription = document.createElement('p');
-
-  for (let e of active) {
-    e.classList.remove('active');
-  }
-  content.innerHTML = '';
-  homeTab.className = 'active';
-  const topNav = document.getElementById('topNav');
-  topNav.classList.remove('responsive');
 
   restaurantName.id = 'restaurantName';
   restaurantName.innerText = 'The Green Sprout Restaurant';

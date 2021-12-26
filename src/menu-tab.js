@@ -1,9 +1,10 @@
 import { Cauliflower, Oatmeal, Salad, SpringRolls } from './images';
+import { selectNavItem } from './helper.js';
 
 export default function loadMenuTab() {
-  const menuTab = document.getElementById('menu');
+  selectNavItem('menu');
+
   const content = document.getElementById('content');
-  const active = document.getElementsByClassName('active');
 
   const breakfastName = document.createElement('h1');
 
@@ -42,14 +43,6 @@ export default function loadMenuTab() {
   const cauliflowerName = document.createElement('h2');
   const cauliflowerText = document.createElement('p');
   const cauliflowerPrice = document.createElement('p');
-
-  for (let e of active) {
-    e.classList.remove('active');
-  }
-  content.innerHTML = '';
-  menuTab.className = 'active';
-  const topNav = document.getElementById('topNav');
-  topNav.classList.remove('responsive');
 
   breakfastName.id = 'breakfastName';
   breakfastName.innerText = 'Breakfast Menu';
