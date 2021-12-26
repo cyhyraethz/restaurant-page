@@ -14,6 +14,17 @@ export default function initialPageLoad() {
   const careers = document.createElement('a');
   const catering = document.createElement('a');
 
+  const icon = document.createElement('a');
+  const bars = document.createElement('i');
+
+  const displayNav = () => {
+    if (topNav.className !== 'responsive') {
+      topNav.classList.add('responsive');
+    } else {
+      topNav.classList.remove('responsive');
+    }
+  };
+
   home.id = 'home';
   home.href = '#home';
   home.innerText = 'Home';
@@ -44,7 +55,15 @@ export default function initialPageLoad() {
   catering.innerText = 'Catering';
   // catering.addEventListener('click', loadCateringTab);
 
-  const anchor = [home, menu, locations, story, careers, catering];
+  icon.href = 'javascript:void(0);';
+  icon.addEventListener('click', displayNav);
+  icon.className = 'icon';
+
+  bars.className = 'fa fa-bars';
+
+  icon.appendChild(bars);
+
+  const anchor = [home, menu, locations, story, careers, catering, icon];
 
   for (let i = 0; i < anchor.length; i++) {
     const li = document.createElement('li');

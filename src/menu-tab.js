@@ -48,6 +48,8 @@ export default function loadMenuTab() {
   }
   content.innerHTML = '';
   menuTab.className = 'active';
+  const topNav = document.getElementById('topNav');
+  topNav.classList.remove('responsive');
 
   breakfastName.id = 'breakfastName';
   breakfastName.innerText = 'Breakfast Menu';

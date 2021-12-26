@@ -60,6 +60,10 @@ body {
   color: white;
 }
 
+#topNav a.icon {
+  display: none;
+}
+
 #restaurantDescription {
   margin: 0 8%;
 }
@@ -81,6 +85,33 @@ body {
     margin-left: 10%;
     margin-right: 10%;
     max-width: 360px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #topNav ul {
+    overflow: hidden;
+  }
+  #topNav a:not(.active) {
+    display: none;
+  }
+  #topNav a.active {
+    float: left;
+  }
+  #topNav a.icon {
+    position: absolute;
+    display: block;
+    max-height: 20px;
+    right: 0;
+    top: 0;
+  }
+  #topNav.reponsive {
+    position: relative;
+  }
+  #topNav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
   }
 }
 

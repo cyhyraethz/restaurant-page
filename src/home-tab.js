@@ -15,6 +15,8 @@ export default function loadHomeTab() {
   }
   content.innerHTML = '';
   homeTab.className = 'active';
+  const topNav = document.getElementById('topNav');
+  topNav.classList.remove('responsive');
 
   restaurantName.id = 'restaurantName';
   restaurantName.innerText = 'The Green Sprout Restaurant';
