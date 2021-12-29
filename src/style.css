@@ -60,7 +60,7 @@ body {
   color: white;
 }
 
-#topNav a.icon {
+#topNav a#icon {
   display: none;
 }
 
@@ -96,7 +96,7 @@ body {
   #topNav a.active {
     float: left;
   }
-  #topNav a.icon {
+  #topNav a#icon {
     position: absolute;
     display: block;
     max-height: 20px;

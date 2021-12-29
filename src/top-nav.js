@@ -32,9 +32,9 @@ export default function loadTopNav() {
   contact.href = '#contact';
   contact.innerText = 'Contact';
 
+  icon.id = 'icon';
   icon.href = 'javascript:void(0);';
   icon.addEventListener('click', displayNav);
-  icon.className = 'icon';
 
   bars.className = 'fa fa-bars';
   bars.setAttribute('aria-hidden', 'true');
