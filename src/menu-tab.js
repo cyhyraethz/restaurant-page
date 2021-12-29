@@ -1,5 +1,5 @@
-import { Cauliflower, Oatmeal, Salad, SpringRolls } from './images';
 import { selectNavItem } from './helper.js';
+import { Cauliflower, Oatmeal, Salad, SpringRolls } from './images';
 
 export default function loadMenuTab() {
   selectNavItem('menu');

@@ -1,5 +1,5 @@
-import { Dining } from './images';
 import { selectNavItem } from './helper.js';
+import { Dining } from './images';
 
 export default function loadHomeTab() {
   selectNavItem('home');
