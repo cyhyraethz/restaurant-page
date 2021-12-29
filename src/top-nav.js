@@ -10,6 +10,7 @@ export default function loadTopNav() {
 
   const icon = document.createElement('a');
   const bars = document.createElement('i');
+  const barsText = document.createElement('span');
 
   const displayNav = () => {
     if (topNav.className !== 'responsive') {
@@ -36,8 +37,13 @@ export default function loadTopNav() {
   icon.className = 'icon';
 
   bars.className = 'fa fa-bars';
+  bars.setAttribute('aria-hidden', 'true');
+
+  barsText.className = 'sr-only';
+  barsText.innerText = 'Navigation Links';
 
   icon.appendChild(bars);
+  icon.appendChild(barsText);
 
   const anchor = [home, menu, contact, icon];
 
