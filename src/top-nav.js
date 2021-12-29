@@ -12,14 +12,6 @@ export default function loadTopNav() {
   const bars = document.createElement('i');
   const barsText = document.createElement('span');
 
-  const displayNav = () => {
-    if (topNav.className !== 'responsive') {
-      topNav.classList.add('responsive');
-    } else {
-      topNav.classList.remove('responsive');
-    }
-  };
-
   home.id = 'home';
   home.href = '#home';
   home.innerText = 'Home';
@@ -34,7 +26,6 @@ export default function loadTopNav() {
 
   icon.id = 'icon';
   icon.href = 'javascript:void(0);';
-  icon.addEventListener('click', displayNav);
 
   bars.className = 'fa fa-bars';
   bars.setAttribute('aria-hidden', 'true');
