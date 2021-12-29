@@ -83,12 +83,6 @@ body {
   .menuContainer {
     align-items: center;
     flex-direction: column;
-    justify-content: center;
-  }
-  .menuContainer div {
-    margin-left: 10%;
-    margin-right: 10%;
-    max-width: 360px;
   }
 }
 
@@ -120,21 +114,12 @@ body {
 }
 
 .menuContainer {
-  align-items: top;
   display: flex;
-  justify-content: center;
+  gap: 0px 40px;
   margin-bottom: 80px;
-}
-
-.menuImgContainer {
-  margin-left: 10%;
-  margin-right: 20px;
-  text-align: right;
+  justify-content: center;
 }
 
 .menuTextContainer {
-  align-items: left;
-  margin-left: 20px;
-  margin-right: 10%;
   max-width: 360px;
 }
