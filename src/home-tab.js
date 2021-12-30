@@ -13,16 +13,16 @@ export default function loadHomeTab() {
 
   restaurantName.id = 'restaurantName';
   restaurantName.innerText = 'The Green Sprout Restaurant';
-  restaurantName.classList.add('centered');
+  restaurantName.className = 'centered';
 
   diningImg.id = 'diningImg';
   diningImg.src = Dining;
   diningImg.alt = 'People enjoying food in the dining area';
-  diningImg.classList.add('fullWidth');
+  diningImg.className = 'fullWidth';
 
   restaurantHeadline.id = 'restaurantHeadline';
   restaurantHeadline.innerText = 'Real Organic Cuisine. Conscientiously Prepared.';
-  restaurantHeadline.classList.add('centered');
+  restaurantHeadline.className = 'centered';
 
   restaurantDescription.id = 'restaurantDescription';
   restaurantDescription.innerText =

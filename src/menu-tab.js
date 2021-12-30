@@ -46,76 +46,76 @@ export default function loadMenuTab() {
 
   breakfastName.id = 'breakfastName';
   breakfastName.innerText = 'Breakfast Menu';
-  breakfastName.classList.add('centered');
+  breakfastName.className = 'centered';
 
-  oatmealContainer.classList.add('menuContainer');
-  oatmealImgContainer.classList.add('menuImgContainer');
+  oatmealContainer.className = 'menuContainer';
+  oatmealImgContainer.className = 'menuImgContainer';
   oatmealImg.id = 'oatmealImg';
   oatmealImg.src = Oatmeal;
   oatmealImg.alt = 'A bowl of oatmeal with berries  and pecans.';
-  oatmealImg.classList.add('menuImage');
-  oatmealTextContainer.classList.add('menuTextContainer');
+  oatmealImg.className = 'menuImage';
+  oatmealTextContainer.className = 'menuTextContainer';
   oatmealName.innerText = 'Very Berry Oatmeal';
-  oatmealName.classList.add('menuName');
+  oatmealName.className = 'menuName';
   oatmealText.innerText = 'Oatmeal topped with mixed berries and roasted pecans.';
-  oatmealText.classList.add('menuText');
+  oatmealText.className = 'menuText';
   oatmealPrice.innerText = '$9.95';
-  oatmealPrice.classList.add('menuPrice');
+  oatmealPrice.className = 'menuPrice';
 
   lunchName.id = 'lunchName';
   lunchName.innerText = 'Lunch Menu';
-  lunchName.classList.add('centered');
+  lunchName.className = 'centered';
 
-  saladContainer.classList.add('menuContainer');
-  saladImgContainer.classList.add('menuImgContainer');
+  saladContainer.className = 'menuContainer';
+  saladImgContainer.className = 'menuImgContainer';
   saladImg.id = 'saladImg';
   saladImg.src = Salad;
   saladImg.alt = 'A vegetable salad with lettuce, tomato, and avocado.';
-  saladImg.classList.add('menuImage');
-  saladTextContainer.classList.add('menuTextContainer');
+  saladImg.className = 'menuImage';
+  saladTextContainer.className = 'menuTextContainer';
   saladName.innerText = 'Chickpea Garden Salad';
-  saladName.classList.add('menuName');
+  saladName.className = 'menuName';
   saladText.innerText =
     'Lettuce, tomato, avocado, roasted sweet potato, chickpeas, purple cabbage, \
     radish, microgreens, and yellow bell pepper slices, topped with our special \
     garlic tahini sauce or our spicy cashew sauce.';
-  saladText.classList.add('menuText');
+  saladText.className = 'menuText';
   saladPrice.innerText = '$11.95';
-  saladPrice.classList.add('menuPrice');
+  saladPrice.className = 'menuPrice';
 
-  springRollsContainer.classList.add('menuContainer');
-  springRollsImgContainer.classList.add('menuImgContainer');
+  springRollsContainer.className = 'menuContainer';
+  springRollsImgContainer.className = 'menuImgContainer';
   springRollsImg.id = 'springRollsImg';
   springRollsImg.src = SpringRolls;
   springRollsImg.alt = 'A dish of spring rolls garnished with lettuce and mint.';
-  springRollsImg.classList.add('menuImage');
-  springRollsTextContainer.classList.add('menuTextContainer');
+  springRollsImg.className = 'menuImage';
+  springRollsTextContainer.className = 'menuTextContainer';
   springRollsName.innerText = 'Vegetable Spring Rolls';
-  springRollsName.classList.add('menuName');
+  springRollsName.className = 'menuName';
   springRollsText.innerText =
     'Avocado, radish, purple cabbage, sprouts, carrots, and cucumber. \
     Comes with a peanut dipping sauce. Garnished with lettuce and mint.';
-  springRollsText.classList.add('menuText');
+  springRollsText.className = 'menuText';
   springRollsPrice.innerText = '$11.95';
-  springRollsPrice.classList.add('menuPrice');
+  springRollsPrice.className = 'menuPrice';
 
   dinnerName.id = 'dinnerName';
   dinnerName.innerText = 'Dinner Menu';
-  dinnerName.classList.add('centered');
+  dinnerName.className = 'centered';
 
-  cauliflowerContainer.classList.add('menuContainer');
-  cauliflowerImgContainer.classList.add('menuImgContainer');
+  cauliflowerContainer.className = 'menuContainer';
+  cauliflowerImgContainer.className = 'menuImgContainer';
   cauliflowerImg.id = 'cauliflowerImg';
   cauliflowerImg.src = Cauliflower;
   cauliflowerImg.alt = 'A plate of roasted cauliflower, lentils, and salad.';
-  cauliflowerImg.classList.add('menuImage');
-  cauliflowerTextContainer.classList.add('menuTextContainer');
+  cauliflowerImg.className = 'menuImage';
+  cauliflowerTextContainer.className = 'menuTextContainer';
   cauliflowerName.innerText = 'Roasted Cauliflower';
-  cauliflowerName.classList.add('menuName');
+  cauliflowerName.className = 'menuName';
   cauliflowerText.innerText = 'Roasted cauliflower with brown lentils, green salad, and cashew sauce.';
-  cauliflowerText.classList.add('menuText');
+  cauliflowerText.className = 'menuText';
   cauliflowerPrice.innerText = '$14.95';
-  cauliflowerPrice.classList.add('menuPrice');
+  cauliflowerPrice.className = 'menuPrice';
 
   content.appendChild(breakfastName);
 
