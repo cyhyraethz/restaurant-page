@@ -67,11 +67,11 @@ body {
 #content {
   padding-top: 50px;
   display: flex;
+  font-size: 21px;
   align-items: center;
   flex-direction: column;
 }
 
-/* limit size */
 #restaurantDescription {
   margin: 0 8%;
   font-size: 21px;
@@ -87,15 +87,16 @@ body {
 }
 
 @media screen and (max-width: 1020px) {
-  .menuContainer {
-    align-items: center;
-    flex-direction: column;
+  #content {
+    padding-top: 74px;
+    font-size: 24px;
   }
-}
-
-@media screen and (max-width: 600px) {
   #topNav ul {
     overflow: hidden;
+  }
+  #topNav ul li a {
+    padding: 21px 24px;
+    font-size: 25px;
   }
   #topNav a:not(.active) {
     display: none;
@@ -106,7 +107,7 @@ body {
   #topNav a#icon {
     position: absolute;
     display: block;
-    max-height: 20px;
+    max-height: 30px;
     right: 0;
     top: 0;
   }
@@ -118,8 +119,9 @@ body {
     display: block;
     text-align: left;
   }
-  #restaurantDescription {
-    font-size: 16px;
+  .menuContainer {
+    align-items: center;
+    flex-direction: column;
   }
 }
 
@@ -144,7 +146,6 @@ body {
 .contactItemContainer {
   display: flex;
   gap: 0px 13px;
-  font-size: 21px;
   flex-direction: row;
   justify-content: flex-start;
 }

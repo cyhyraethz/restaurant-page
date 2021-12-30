@@ -21,7 +21,11 @@ export default function loadHomeTab() {
   diningImg.className = 'fullWidth';
 
   restaurantHeadline.id = 'restaurantHeadline';
-  restaurantHeadline.innerText = 'Real Organic Cuisine. Conscientiously Prepared.';
+  if (window.screen.width <= 1020) {
+    restaurantHeadline.innerText = 'Real Organic Cuisine.\n Conscientiously Prepared.';
+  } else {
+    restaurantHeadline.innerText = 'Real Organic Cuisine. Conscientiously Prepared.';
+  }
   restaurantHeadline.className = 'centered';
 
   restaurantDescription.id = 'restaurantDescription';
