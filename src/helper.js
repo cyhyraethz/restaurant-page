@@ -12,11 +12,7 @@ const selectNavItem = (tab) => {
 };
 
 const displayNav = () => {
-  if (topNav.className !== 'responsive') {
-    topNav.classList.add('responsive');
-  } else {
-    topNav.classList.remove('responsive');
-  }
+  topNav.classList.toggle('responsive');
 };
 
 export { selectNavItem, displayNav };
