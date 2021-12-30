@@ -149,19 +149,15 @@ body {
   justify-content: flex-start;
 }
 
-.contactItemContainer i {
-  color: darkblue;
-}
-
 .contactItemContainer i.fa-phone-alt {
   margin: 18px 0;
 }
 
 .contactItemContainer i.fa-envelope {
-  margin: 20px 0;
+  margin: 21px 0;
 }
 
 .contactItemContainer i:hover {
   cursor: pointer;
-  color: blue;
+  color: #174576;
 }

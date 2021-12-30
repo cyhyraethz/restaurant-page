@@ -10,25 +10,29 @@ export default function loadContactTab() {
   const contactContainer = document.createElement('div');
 
   const orderPhoneContainer = document.createElement('div');
-  const orderPhoneLink = document.createElement('a');
+  const orderPhoneIconContainer = document.createElement('div');
+  const orderPhoneIconLink = document.createElement('a');
   const orderPhoneIcon = document.createElement('i');
   const orderPhoneIconText = document.createElement('Span');
   const orderPhoneText = document.createElement('p');
 
   const dylanMailContainer = document.createElement('div');
-  const dylanMailLink = document.createElement('a');
+  const dylanMailIconContainer = document.createElement('div');
+  const dylanMailIconLink = document.createElement('a');
   const dylanMailIcon = document.createElement('i');
   const dylanMailIconText = document.createElement('Span');
   const dylanMailText = document.createElement('p');
 
   const arloMailContainer = document.createElement('div');
-  const arloMailLink = document.createElement('a');
+  const arloMailIconContainer = document.createElement('div');
+  const arloMailIconLink = document.createElement('a');
   const arloMailIcon = document.createElement('i');
   const arloMailIconText = document.createElement('Span');
   const arloMailText = document.createElement('p');
 
   const officePhoneContainer = document.createElement('div');
-  const officePhoneLink = document.createElement('a');
+  const officePhoneIconContainer = document.createElement('div');
+  const officePhoneIconLink = document.createElement('a');
   const officePhoneIcon = document.createElement('i');
   const officePhoneIconText = document.createElement('Span');
   const officePhoneText = document.createElement('p');
@@ -40,7 +44,7 @@ export default function loadContactTab() {
   contactContainer.className = 'contactContainer';
 
   orderPhoneContainer.className = 'contactItemContainer';
-  orderPhoneLink.href = 'tel:8315550189';
+  orderPhoneIconLink.href = 'tel:8315550189';
   orderPhoneIcon.className = 'fas fa-phone-alt';
   orderPhoneIcon.setAttribute('aria-hidden', 'true');
   orderPhoneIconText.className = 'sr-only';
@@ -48,7 +52,7 @@ export default function loadContactTab() {
   orderPhoneText.innerText = 'Call to Place an Order: 831.555.0189';
 
   dylanMailContainer.className = 'contactItemContainer';
-  dylanMailLink.href = 'mailto:dylan@thegreensproutrestaurant.com';
+  dylanMailIconLink.href = 'mailto:dylan@thegreensproutrestaurant.com';
   dylanMailIcon.className = 'fas fa-envelope';
   dylanMailIcon.setAttribute('aria-hidden', 'true');
   dylanMailIconText.className = 'sr-only';
@@ -56,7 +60,7 @@ export default function loadContactTab() {
   dylanMailText.innerText = 'dylan@thegreensproutrestaurant.com';
 
   arloMailContainer.className = 'contactItemContainer';
-  arloMailLink.href = 'mailto:arlo@thegreensproutrestaurant.com';
+  arloMailIconLink.href = 'mailto:arlo@thegreensproutrestaurant.com';
   arloMailIcon.className = 'fas fa-envelope';
   arloMailIcon.setAttribute('aria-hidden', 'true');
   arloMailIconText.className = 'sr-only';
@@ -64,7 +68,7 @@ export default function loadContactTab() {
   arloMailText.innerText = 'arlo@thegreensproutrestaurant.com';
 
   officePhoneContainer.className = 'contactItemContainer';
-  officePhoneLink.href = 'tel:8315550190';
+  officePhoneIconLink.href = 'tel:8315550190';
   officePhoneIcon.className = 'fas fa-phone-alt';
   officePhoneIcon.setAttribute('aria-hidden', 'true');
   officePhoneIconText.className = 'sr-only';
@@ -76,22 +80,26 @@ export default function loadContactTab() {
   content.appendChild(contactContainer);
 
   contactContainer.appendChild(orderPhoneContainer);
-  orderPhoneContainer.appendChild(orderPhoneLink);
-  orderPhoneLink.appendChild(orderPhoneIcon);
+  orderPhoneContainer.appendChild(orderPhoneIconContainer);
+  orderPhoneIconContainer.appendChild(orderPhoneIconLink);
+  orderPhoneIconLink.appendChild(orderPhoneIcon);
   orderPhoneContainer.appendChild(orderPhoneText);
 
   contactContainer.appendChild(dylanMailContainer);
-  dylanMailContainer.appendChild(dylanMailLink);
-  dylanMailLink.appendChild(dylanMailIcon);
+  dylanMailContainer.appendChild(dylanMailIconContainer);
+  dylanMailIconContainer.appendChild(dylanMailIconLink);
+  dylanMailIconLink.appendChild(dylanMailIcon);
   dylanMailContainer.appendChild(dylanMailText);
 
   contactContainer.appendChild(arloMailContainer);
-  arloMailContainer.appendChild(arloMailLink);
-  arloMailLink.appendChild(arloMailIcon);
+  arloMailContainer.appendChild(arloMailIconContainer);
+  arloMailIconContainer.appendChild(arloMailIconLink);
+  arloMailIconLink.appendChild(arloMailIcon);
   arloMailContainer.appendChild(arloMailText);
 
   contactContainer.appendChild(officePhoneContainer);
-  officePhoneContainer.appendChild(officePhoneLink);
-  officePhoneLink.appendChild(officePhoneIcon);
+  officePhoneContainer.appendChild(officePhoneIconContainer);
+  officePhoneIconContainer.appendChild(officePhoneIconLink);
+  officePhoneIconLink.appendChild(officePhoneIcon);
   officePhoneContainer.appendChild(officePhoneText);
 }
