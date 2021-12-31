@@ -10,28 +10,28 @@ export default function loadContactTab() {
   const contactContainer = document.createElement('div');
 
   const orderPhoneContainer = document.createElement('div');
-  const orderPhoneIconContainer = document.createElement('div');
+  const orderPhoneIconContainer = document.createElement('p');
   const orderPhoneIconLink = document.createElement('a');
   const orderPhoneIcon = document.createElement('i');
   const orderPhoneIconText = document.createElement('Span');
   const orderPhoneText = document.createElement('p');
 
   const dylanMailContainer = document.createElement('div');
-  const dylanMailIconContainer = document.createElement('div');
+  const dylanMailIconContainer = document.createElement('p');
   const dylanMailIconLink = document.createElement('a');
   const dylanMailIcon = document.createElement('i');
   const dylanMailIconText = document.createElement('Span');
   const dylanMailText = document.createElement('p');
 
   const arloMailContainer = document.createElement('div');
-  const arloMailIconContainer = document.createElement('div');
+  const arloMailIconContainer = document.createElement('p');
   const arloMailIconLink = document.createElement('a');
   const arloMailIcon = document.createElement('i');
   const arloMailIconText = document.createElement('Span');
   const arloMailText = document.createElement('p');
 
   const officePhoneContainer = document.createElement('div');
-  const officePhoneIconContainer = document.createElement('div');
+  const officePhoneIconContainer = document.createElement('p');
   const officePhoneIconLink = document.createElement('a');
   const officePhoneIcon = document.createElement('i');
   const officePhoneIconText = document.createElement('Span');

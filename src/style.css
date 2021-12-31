@@ -135,29 +135,11 @@ body {
   .contactContainer {
     font-size: 38px;
   }
-  .contactItemContainer {
-    gap: 0px 24px;
-  }
-  .contactItemContainer i.fa-phone-alt {
-    margin: 34px 0;
-  }
-  .contactItemContainer i.fa-envelope {
-    margin: 39px 0;
-  }
 }
 
 @media screen and (min-width: 1021px) {
   .menuContainer div {
     max-width: 360px;
-  }
-  .contactItemContainer {
-    gap: 0px 13px;
-  }
-  .contactItemContainer i.fa-phone-alt {
-    margin: 18px 0;
-  }
-  .contactItemContainer i.fa-envelope {
-    margin: 21px 0;
   }
 }
 
@@ -177,6 +159,7 @@ body {
 
 .contactItemContainer {
   display: flex;
+  gap: 0 0.63em;
   flex-direction: row;
   justify-content: flex-start;
 }
