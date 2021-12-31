@@ -74,7 +74,6 @@ body {
 
 #restaurantDescription {
   margin: 0 8%;
-  font-size: 21px;
   max-width: 54em;
 }
 
@@ -88,15 +87,15 @@ body {
 
 @media screen and (max-width: 1020px) {
   #content {
-    padding-top: 74px;
-    font-size: 24px;
+    padding-top: 120px;
+    font-size: 30px;
   }
   #topNav ul {
     overflow: hidden;
   }
   #topNav ul li a {
-    padding: 21px 24px;
-    font-size: 25px;
+    padding: 33px 38px;
+    font-size: 40px;
   }
   #topNav a:not(.active) {
     display: none;
@@ -107,7 +106,7 @@ body {
   #topNav a#icon {
     position: absolute;
     display: block;
-    max-height: 30px;
+    max-height: 48px;
     right: 0;
     top: 0;
   }
@@ -120,8 +119,45 @@ body {
     text-align: left;
   }
   .menuContainer {
+    width: 100%;
     align-items: center;
     flex-direction: column;
+  }
+  .menuImgContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .menuTextContainer,
+  .menuImage {
+    width: 70%;
+  }
+  .contactContainer {
+    font-size: 38px;
+  }
+  .contactItemContainer {
+    gap: 0px 24px;
+  }
+  .contactItemContainer i.fa-phone-alt {
+    margin: 34px 0;
+  }
+  .contactItemContainer i.fa-envelope {
+    margin: 39px 0;
+  }
+}
+
+@media screen and (min-width: 1021px) {
+  .menuContainer div {
+    max-width: 360px;
+  }
+  .contactItemContainer {
+    gap: 0px 13px;
+  }
+  .contactItemContainer i.fa-phone-alt {
+    margin: 18px 0;
+  }
+  .contactItemContainer i.fa-envelope {
+    margin: 21px 0;
   }
 }
 
@@ -130,10 +166,6 @@ body {
   gap: 0px 40px;
   margin-bottom: 58.56px;
   justify-content: center;
-}
-
-.menuTextContainer {
-  max-width: 360px;
 }
 
 .contactContainer {
@@ -145,17 +177,8 @@ body {
 
 .contactItemContainer {
   display: flex;
-  gap: 0px 13px;
   flex-direction: row;
   justify-content: flex-start;
-}
-
-.contactItemContainer i.fa-phone-alt {
-  margin: 18px 0;
-}
-
-.contactItemContainer i.fa-envelope {
-  margin: 21px 0;
 }
 
 .contactItemContainer i:hover {

@@ -8,7 +8,7 @@ export default function loadHomeTab() {
 
   const restaurantName = document.createElement('h1');
   const diningImg = document.createElement('img');
-  const restaurantHeadline = document.createElement('h1');
+  const restaurantHeadline = document.createElement('h2');
   const restaurantDescription = document.createElement('p');
 
   restaurantName.id = 'restaurantName';
