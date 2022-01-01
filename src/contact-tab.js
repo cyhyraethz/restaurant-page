@@ -9,33 +9,19 @@ export default function loadContactTab() {
 
   const contactContainer = document.createElement('div');
 
-  const orderPhoneContainer = document.createElement('div');
-  const orderPhoneIconContainer = document.createElement('p');
-  const orderPhoneIconLink = document.createElement('a');
-  const orderPhoneIcon = document.createElement('i');
-  const orderPhoneIconText = document.createElement('Span');
-  const orderPhoneText = document.createElement('p');
+  const contactList = ['orderPhone', 'dylanMail', 'arloMail', 'officePhone'];
 
-  const dylanMailContainer = document.createElement('div');
-  const dylanMailIconContainer = document.createElement('p');
-  const dylanMailIconLink = document.createElement('a');
-  const dylanMailIcon = document.createElement('i');
-  const dylanMailIconText = document.createElement('Span');
-  const dylanMailText = document.createElement('p');
-
-  const arloMailContainer = document.createElement('div');
-  const arloMailIconContainer = document.createElement('p');
-  const arloMailIconLink = document.createElement('a');
-  const arloMailIcon = document.createElement('i');
-  const arloMailIconText = document.createElement('Span');
-  const arloMailText = document.createElement('p');
-
-  const officePhoneContainer = document.createElement('div');
-  const officePhoneIconContainer = document.createElement('p');
-  const officePhoneIconLink = document.createElement('a');
-  const officePhoneIcon = document.createElement('i');
-  const officePhoneIconText = document.createElement('Span');
-  const officePhoneText = document.createElement('p');
+  for (let contact of contactList) {
+    window[contact + 'Container'] = document.createElement('div');
+    window[contact + 'IconContainer'] = document.createElement('p');
+    window[contact + 'IconLink'] = document.createElement('a');
+    window[contact + 'Icon'] = document.createElement('i');
+    window[contact + 'IconText'] = document.createElement('Span');
+    window[contact + 'Text'] = document.createElement('p');
+    window[contact + 'Container'].className = 'contactItemContainer';
+    window[contact + 'Icon'].setAttribute('aria-hidden', 'true');
+    window[contact + 'IconText'].className = 'sr-only';
+  }
 
   contactName.id = 'contactName';
   contactName.innerText = 'Contact Us';
@@ -43,35 +29,23 @@ export default function loadContactTab() {
 
   contactContainer.className = 'contactContainer';
 
-  orderPhoneContainer.className = 'contactItemContainer';
   orderPhoneIconLink.href = 'tel:8315550189';
   orderPhoneIcon.className = 'fas fa-phone-alt';
-  orderPhoneIcon.setAttribute('aria-hidden', 'true');
-  orderPhoneIconText.className = 'sr-only';
   orderPhoneIconText.innerText = 'Call to Place an Order';
   orderPhoneText.innerText = 'Call to Place an Order: 831.555.0189';
 
-  dylanMailContainer.className = 'contactItemContainer';
   dylanMailIconLink.href = 'mailto:dylan@thegreensproutrestaurant.com';
   dylanMailIcon.className = 'fas fa-envelope';
-  dylanMailIcon.setAttribute('aria-hidden', 'true');
-  dylanMailIconText.className = 'sr-only';
   dylanMailIconText.innerText = 'dylan@thegreensproutrestaurant.com';
   dylanMailText.innerText = 'dylan@thegreensproutrestaurant.com';
 
-  arloMailContainer.className = 'contactItemContainer';
   arloMailIconLink.href = 'mailto:arlo@thegreensproutrestaurant.com';
   arloMailIcon.className = 'fas fa-envelope';
-  arloMailIcon.setAttribute('aria-hidden', 'true');
-  arloMailIconText.className = 'sr-only';
   arloMailIconText.innerText = 'arlo@thegreensproutrestaurant.com';
   arloMailText.innerText = 'arlo@thegreensproutrestaurant.com';
 
-  officePhoneContainer.className = 'contactItemContainer';
   officePhoneIconLink.href = 'tel:8315550190';
   officePhoneIcon.className = 'fas fa-phone-alt';
-  officePhoneIcon.setAttribute('aria-hidden', 'true');
-  officePhoneIconText.className = 'sr-only';
   officePhoneIconText.innerText = 'Office Number';
   officePhoneText.innerText = 'Office Number: 831.555.0190';
 
@@ -79,27 +53,11 @@ export default function loadContactTab() {
 
   content.appendChild(contactContainer);
 
-  contactContainer.appendChild(orderPhoneContainer);
-  orderPhoneContainer.appendChild(orderPhoneIconContainer);
-  orderPhoneIconContainer.appendChild(orderPhoneIconLink);
-  orderPhoneIconLink.appendChild(orderPhoneIcon);
-  orderPhoneContainer.appendChild(orderPhoneText);
-
-  contactContainer.appendChild(dylanMailContainer);
-  dylanMailContainer.appendChild(dylanMailIconContainer);
-  dylanMailIconContainer.appendChild(dylanMailIconLink);
-  dylanMailIconLink.appendChild(dylanMailIcon);
-  dylanMailContainer.appendChild(dylanMailText);
-
-  contactContainer.appendChild(arloMailContainer);
-  arloMailContainer.appendChild(arloMailIconContainer);
-  arloMailIconContainer.appendChild(arloMailIconLink);
-  arloMailIconLink.appendChild(arloMailIcon);
-  arloMailContainer.appendChild(arloMailText);
-
-  contactContainer.appendChild(officePhoneContainer);
-  officePhoneContainer.appendChild(officePhoneIconContainer);
-  officePhoneIconContainer.appendChild(officePhoneIconLink);
-  officePhoneIconLink.appendChild(officePhoneIcon);
-  officePhoneContainer.appendChild(officePhoneText);
+  for (let contact of contactList) {
+    contactContainer.appendChild(window[contact + 'Container']);
+    window[contact + 'Container'].appendChild(window[contact + 'IconContainer']);
+    window[contact + 'IconContainer'].appendChild(window[contact + 'IconLink']);
+    window[contact + 'IconLink'].appendChild(window[contact + 'Icon']);
+    window[contact + 'Container'].appendChild(window[contact + 'Text']);
+  }
 }
