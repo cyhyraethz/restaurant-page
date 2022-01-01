@@ -6,9 +6,17 @@ import loadContactTab from './contact-tab.js';
 import { displayNav } from './helper.js';
 
 loadTopNav();
-loadHomeTab();
-// loadMenuTab();
-// loadContactTab();
+
+switch (window.location.hash) {
+  case '#menu':
+    loadMenuTab();
+    break;
+  case '#contact':
+    loadContactTab();
+    break;
+  default:
+    loadHomeTab();
+}
 
 const home = document.getElementById('home');
 const menu = document.getElementById('menu');
