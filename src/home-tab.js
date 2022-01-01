@@ -11,16 +11,13 @@ export default function loadHomeTab() {
   const restaurantHeadline = document.createElement('h2');
   const restaurantDescription = document.createElement('p');
 
-  restaurantName.id = 'restaurantName';
   restaurantName.innerText = 'The Green Sprout Restaurant';
   restaurantName.className = 'centered';
 
-  diningImg.id = 'diningImg';
   diningImg.src = Dining;
   diningImg.alt = 'People enjoying food in the dining area';
   diningImg.className = 'fullWidth';
 
-  restaurantHeadline.id = 'restaurantHeadline';
   if (window.screen.width <= 1020) {
     restaurantHeadline.innerText = 'Real Organic Cuisine.\n Conscientiously Prepared.';
   } else {

@@ -44,13 +44,11 @@ export default function loadMenuTab() {
   const cauliflowerText = document.createElement('p');
   const cauliflowerPrice = document.createElement('p');
 
-  breakfastName.id = 'breakfastName';
   breakfastName.innerText = 'Breakfast Menu';
   breakfastName.className = 'centered';
 
   oatmealContainer.className = 'menuContainer';
   oatmealImgContainer.className = 'menuImgContainer';
-  oatmealImg.id = 'oatmealImg';
   oatmealImg.src = Oatmeal;
   oatmealImg.alt = 'A bowl of oatmeal with berries  and pecans.';
   oatmealImg.className = 'menuImage';
@@ -62,13 +60,11 @@ export default function loadMenuTab() {
   oatmealPrice.innerText = '$9.95';
   oatmealPrice.className = 'menuPrice';
 
-  lunchName.id = 'lunchName';
   lunchName.innerText = 'Lunch Menu';
   lunchName.className = 'centered';
 
   saladContainer.className = 'menuContainer';
   saladImgContainer.className = 'menuImgContainer';
-  saladImg.id = 'saladImg';
   saladImg.src = Salad;
   saladImg.alt = 'A vegetable salad with lettuce, tomato, and avocado.';
   saladImg.className = 'menuImage';
@@ -85,7 +81,6 @@ export default function loadMenuTab() {
 
   springRollsContainer.className = 'menuContainer';
   springRollsImgContainer.className = 'menuImgContainer';
-  springRollsImg.id = 'springRollsImg';
   springRollsImg.src = SpringRolls;
   springRollsImg.alt = 'A dish of spring rolls garnished with lettuce and mint.';
   springRollsImg.className = 'menuImage';
@@ -99,13 +94,11 @@ export default function loadMenuTab() {
   springRollsPrice.innerText = '$11.95';
   springRollsPrice.className = 'menuPrice';
 
-  dinnerName.id = 'dinnerName';
   dinnerName.innerText = 'Dinner Menu';
   dinnerName.className = 'centered';
 
   cauliflowerContainer.className = 'menuContainer';
   cauliflowerImgContainer.className = 'menuImgContainer';
-  cauliflowerImg.id = 'cauliflowerImg';
   cauliflowerImg.src = Cauliflower;
   cauliflowerImg.alt = 'A plate of roasted cauliflower, lentils, and salad.';
   cauliflowerImg.className = 'menuImage';

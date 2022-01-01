@@ -45,7 +45,6 @@ export default function loadTopNav() {
   }
 
   topNav.id = 'topNav';
-  navList.id = 'navList';
 
   topNav.appendChild(navList);
   navigation.appendChild(topNav);
