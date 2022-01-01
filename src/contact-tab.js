@@ -9,55 +9,71 @@ export default function loadContactTab() {
 
   const contactContainer = document.createElement('div');
 
-  const contactList = ['orderPhone', 'dylanMail', 'arloMail', 'officePhone'];
+  const contactList = [
+    {
+      name: 'orderPhone',
+      properties: {
+        'IconLink.href': 'tel:8315550189',
+        'Icon.className': 'fas fa-phone-alt',
+        'IconText.innerText': 'Call to Place an Order',
+        'Text.innerText': 'Call to Place an Order: 831.555.0189',
+      },
+    },
+    {
+      name: 'dylanMail',
+      properties: {
+        'IconLink.href': 'mailto:dylan@thegreensproutrestaurant.com',
+        'Icon.className': 'fas fa-envelope',
+        'IconText.innerText': 'dylan@thegreensproutrestaurant.com',
+        'Text.innerText': 'dylan@thegreensproutrestaurant.com',
+      },
+    },
+    {
+      name: 'arloMail',
+      properties: {
+        'IconLink.href': 'mailto:arlo@thegreensproutrestaurant.com',
+        'Icon.className': 'fas fa-envelope',
+        'IconText.innerText': 'arlo@thegreensproutrestaurant.com',
+        'Text.innerText': 'arlo@thegreensproutrestaurant.com',
+      },
+    },
+    {
+      name: 'officePhone',
+      properties: {
+        'IconLink.href': 'tel:8315550190',
+        'Icon.className': 'fas fa-phone-alt',
+        'IconText.innerText': 'Office Number',
+        'Text.innerText': 'Office Number: 831.555.0190',
+      },
+    },
+  ];
 
-  for (let contact of contactList) {
-    window[contact + 'Container'] = document.createElement('div');
-    window[contact + 'IconContainer'] = document.createElement('p');
-    window[contact + 'IconLink'] = document.createElement('a');
-    window[contact + 'Icon'] = document.createElement('i');
-    window[contact + 'IconText'] = document.createElement('Span');
-    window[contact + 'Text'] = document.createElement('p');
-    window[contact + 'Container'].className = 'contactItemContainer';
-    window[contact + 'Icon'].setAttribute('aria-hidden', 'true');
-    window[contact + 'IconText'].className = 'sr-only';
-  }
-
-  contactName.id = 'contactName';
   contactName.innerText = 'Contact Us';
   contactName.className = 'centered';
 
   contactContainer.className = 'contactContainer';
-
-  orderPhoneIconLink.href = 'tel:8315550189';
-  orderPhoneIcon.className = 'fas fa-phone-alt';
-  orderPhoneIconText.innerText = 'Call to Place an Order';
-  orderPhoneText.innerText = 'Call to Place an Order: 831.555.0189';
-
-  dylanMailIconLink.href = 'mailto:dylan@thegreensproutrestaurant.com';
-  dylanMailIcon.className = 'fas fa-envelope';
-  dylanMailIconText.innerText = 'dylan@thegreensproutrestaurant.com';
-  dylanMailText.innerText = 'dylan@thegreensproutrestaurant.com';
-
-  arloMailIconLink.href = 'mailto:arlo@thegreensproutrestaurant.com';
-  arloMailIcon.className = 'fas fa-envelope';
-  arloMailIconText.innerText = 'arlo@thegreensproutrestaurant.com';
-  arloMailText.innerText = 'arlo@thegreensproutrestaurant.com';
-
-  officePhoneIconLink.href = 'tel:8315550190';
-  officePhoneIcon.className = 'fas fa-phone-alt';
-  officePhoneIconText.innerText = 'Office Number';
-  officePhoneText.innerText = 'Office Number: 831.555.0190';
 
   content.appendChild(contactName);
 
   content.appendChild(contactContainer);
 
   for (let contact of contactList) {
-    contactContainer.appendChild(window[contact + 'Container']);
-    window[contact + 'Container'].appendChild(window[contact + 'IconContainer']);
-    window[contact + 'IconContainer'].appendChild(window[contact + 'IconLink']);
-    window[contact + 'IconLink'].appendChild(window[contact + 'Icon']);
-    window[contact + 'Container'].appendChild(window[contact + 'Text']);
+    window[contact.name + 'Container'] = document.createElement('div');
+    window[contact.name + 'IconContainer'] = document.createElement('p');
+    window[contact.name + 'IconLink'] = document.createElement('a');
+    window[contact.name + 'Icon'] = document.createElement('i');
+    window[contact.name + 'IconText'] = document.createElement('Span');
+    window[contact.name + 'Text'] = document.createElement('p');
+    window[contact.name + 'Container'].className = 'contactItemContainer';
+    window[contact.name + 'Icon'].setAttribute('aria-hidden', 'true');
+    window[contact.name + 'IconText'].className = 'sr-only';
+    for (let property in contact.properties) {
+      window[contact.name + property.split('.')[0]][property.split('.')[1]] = contact.properties[property];
+    }
+    contactContainer.appendChild(window[contact.name + 'Container']);
+    window[contact.name + 'Container'].appendChild(window[contact.name + 'IconContainer']);
+    window[contact.name + 'IconContainer'].appendChild(window[contact.name + 'IconLink']);
+    window[contact.name + 'IconLink'].appendChild(window[contact.name + 'Icon']);
+    window[contact.name + 'Container'].appendChild(window[contact.name + 'Text']);
   }
 }
