@@ -18,11 +18,10 @@ export default function loadHomeTab() {
   diningImg.alt = 'People enjoying food in the dining area';
   diningImg.className = 'fullWidth';
 
-  if (window.screen.width <= 1020) {
-    restaurantHeadline.innerText = 'Real Organic Cuisine.\n Conscientiously Prepared.';
-  } else {
-    restaurantHeadline.innerText = 'Real Organic Cuisine. Conscientiously Prepared.';
-  }
+  restaurantHeadline.id = 'restaurantHeadline';
+  restaurantHeadline.appendChild(document.createTextNode('Real Organic Cuisine.'));
+  restaurantHeadline.appendChild(document.createElement('br'));
+  restaurantHeadline.appendChild(document.createTextNode('Conscientiously Prepared.'));
   restaurantHeadline.className = 'centered';
 
   restaurantDescription.id = 'restaurantDescription';
