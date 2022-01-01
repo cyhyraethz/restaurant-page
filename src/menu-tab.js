@@ -6,145 +6,89 @@ export default function loadMenuTab() {
 
   const content = document.getElementById('content');
 
-  const breakfastName = document.createElement('h1');
+  const menuList = [
+    'breakfast',
+    {
+      name: 'oatmeal',
+      properties: {
+        'Img.src': Oatmeal,
+        'Img.alt': 'A bowl of oatmeal with berries and pecans.',
+        'Name.innerText': 'Very Berry Oatmeal',
+        'Text.innerText': 'Oatmeal topped with mixed berries and roasted pecans.',
+        'Price.innerText': '$9.95',
+      },
+    },
+    'lunch',
+    {
+      name: 'salad',
+      properties: {
+        'Img.src': Salad,
+        'Img.alt': 'A vegetable salad with lettuce, tomato, and avocado.',
+        'Name.innerText': 'Chickpea Garden Salad',
+        'Text.innerText':
+          'Lettuce, tomato, avocado, roasted sweet potato, chickpeas, purple cabbage, \
+          radish, microgreens, and yellow bell pepper slices, topped with our special \
+          garlic tahini sauce or our spicy cashew sauce.',
+        'Price.innerText': '$11.95',
+      },
+    },
+    {
+      name: 'springRolls',
+      properties: {
+        'Img.src': SpringRolls,
+        'Img.alt': 'A dish of spring rolls garnished with lettuce and mint.',
+        'Name.innerText': 'Vegetable Spring Rolls',
+        'Text.innerText':
+          'Avocado, radish, purple cabbage, sprouts, carrots, and cucumber. \
+          Comes with a peanut dipping sauce. Garnished with lettuce and mint.',
+        'Price.innerText': '$11.95',
+      },
+    },
+    'dinner',
+    {
+      name: 'cauliflower',
+      properties: {
+        'Img.src': Cauliflower,
+        'Img.alt': 'A plate of roasted cauliflower, lentils, and salad.',
+        'Name.innerText': 'Roasted Cauliflower',
+        'Text.innerText': 'Roasted cauliflower with brown lentils, green salad, and cashew sauce.',
+        'Price.innerText': '$14.95',
+      },
+    },
+  ];
 
-  const oatmealContainer = document.createElement('div');
-  const oatmealImgContainer = document.createElement('div');
-  const oatmealImg = document.createElement('img');
-  const oatmealTextContainer = document.createElement('div');
-  const oatmealName = document.createElement('h2');
-  const oatmealText = document.createElement('p');
-  const oatmealPrice = document.createElement('p');
-
-  const lunchName = document.createElement('h1');
-
-  const saladContainer = document.createElement('div');
-  const saladImgContainer = document.createElement('div');
-  const saladImg = document.createElement('img');
-  const saladTextContainer = document.createElement('div');
-  const saladName = document.createElement('h2');
-  const saladText = document.createElement('p');
-  const saladPrice = document.createElement('p');
-
-  const springRollsContainer = document.createElement('div');
-  const springRollsImgContainer = document.createElement('div');
-  const springRollsImg = document.createElement('img');
-  const springRollsTextContainer = document.createElement('div');
-  const springRollsName = document.createElement('h2');
-  const springRollsText = document.createElement('p');
-  const springRollsPrice = document.createElement('p');
-
-  const dinnerName = document.createElement('h1');
-
-  const cauliflowerContainer = document.createElement('div');
-  const cauliflowerImgContainer = document.createElement('div');
-  const cauliflowerImg = document.createElement('img');
-  const cauliflowerTextContainer = document.createElement('div');
-  const cauliflowerName = document.createElement('h2');
-  const cauliflowerText = document.createElement('p');
-  const cauliflowerPrice = document.createElement('p');
-
-  breakfastName.innerText = 'Breakfast Menu';
-  breakfastName.className = 'centered';
-
-  oatmealContainer.className = 'menuContainer';
-  oatmealImgContainer.className = 'menuImgContainer';
-  oatmealImg.src = Oatmeal;
-  oatmealImg.alt = 'A bowl of oatmeal with berries  and pecans.';
-  oatmealImg.className = 'menuImage';
-  oatmealTextContainer.className = 'menuTextContainer';
-  oatmealName.innerText = 'Very Berry Oatmeal';
-  oatmealName.className = 'menuName';
-  oatmealText.innerText = 'Oatmeal topped with mixed berries and roasted pecans.';
-  oatmealText.className = 'menuText';
-  oatmealPrice.innerText = '$9.95';
-  oatmealPrice.className = 'menuPrice';
-
-  lunchName.innerText = 'Lunch Menu';
-  lunchName.className = 'centered';
-
-  saladContainer.className = 'menuContainer';
-  saladImgContainer.className = 'menuImgContainer';
-  saladImg.src = Salad;
-  saladImg.alt = 'A vegetable salad with lettuce, tomato, and avocado.';
-  saladImg.className = 'menuImage';
-  saladTextContainer.className = 'menuTextContainer';
-  saladName.innerText = 'Chickpea Garden Salad';
-  saladName.className = 'menuName';
-  saladText.innerText =
-    'Lettuce, tomato, avocado, roasted sweet potato, chickpeas, purple cabbage, \
-    radish, microgreens, and yellow bell pepper slices, topped with our special \
-    garlic tahini sauce or our spicy cashew sauce.';
-  saladText.className = 'menuText';
-  saladPrice.innerText = '$11.95';
-  saladPrice.className = 'menuPrice';
-
-  springRollsContainer.className = 'menuContainer';
-  springRollsImgContainer.className = 'menuImgContainer';
-  springRollsImg.src = SpringRolls;
-  springRollsImg.alt = 'A dish of spring rolls garnished with lettuce and mint.';
-  springRollsImg.className = 'menuImage';
-  springRollsTextContainer.className = 'menuTextContainer';
-  springRollsName.innerText = 'Vegetable Spring Rolls';
-  springRollsName.className = 'menuName';
-  springRollsText.innerText =
-    'Avocado, radish, purple cabbage, sprouts, carrots, and cucumber. \
-    Comes with a peanut dipping sauce. Garnished with lettuce and mint.';
-  springRollsText.className = 'menuText';
-  springRollsPrice.innerText = '$11.95';
-  springRollsPrice.className = 'menuPrice';
-
-  dinnerName.innerText = 'Dinner Menu';
-  dinnerName.className = 'centered';
-
-  cauliflowerContainer.className = 'menuContainer';
-  cauliflowerImgContainer.className = 'menuImgContainer';
-  cauliflowerImg.src = Cauliflower;
-  cauliflowerImg.alt = 'A plate of roasted cauliflower, lentils, and salad.';
-  cauliflowerImg.className = 'menuImage';
-  cauliflowerTextContainer.className = 'menuTextContainer';
-  cauliflowerName.innerText = 'Roasted Cauliflower';
-  cauliflowerName.className = 'menuName';
-  cauliflowerText.innerText = 'Roasted cauliflower with brown lentils, green salad, and cashew sauce.';
-  cauliflowerText.className = 'menuText';
-  cauliflowerPrice.innerText = '$14.95';
-  cauliflowerPrice.className = 'menuPrice';
-
-  content.appendChild(breakfastName);
-
-  content.appendChild(oatmealContainer);
-  oatmealContainer.appendChild(oatmealImgContainer);
-  oatmealImgContainer.appendChild(oatmealImg);
-  oatmealContainer.appendChild(oatmealTextContainer);
-  oatmealTextContainer.appendChild(oatmealName);
-  oatmealTextContainer.appendChild(oatmealText);
-  oatmealTextContainer.appendChild(oatmealPrice);
-
-  content.appendChild(lunchName);
-
-  content.appendChild(saladContainer);
-  saladContainer.appendChild(saladImgContainer);
-  saladImgContainer.appendChild(saladImg);
-  saladContainer.appendChild(saladTextContainer);
-  saladTextContainer.appendChild(saladName);
-  saladTextContainer.appendChild(saladText);
-  saladTextContainer.appendChild(saladPrice);
-
-  content.appendChild(springRollsContainer);
-  springRollsContainer.appendChild(springRollsImgContainer);
-  springRollsImgContainer.appendChild(springRollsImg);
-  springRollsContainer.appendChild(springRollsTextContainer);
-  springRollsTextContainer.appendChild(springRollsName);
-  springRollsTextContainer.appendChild(springRollsText);
-  springRollsTextContainer.appendChild(springRollsPrice);
-
-  content.appendChild(dinnerName);
-
-  content.appendChild(cauliflowerContainer);
-  cauliflowerContainer.appendChild(cauliflowerImgContainer);
-  cauliflowerImgContainer.appendChild(cauliflowerImg);
-  cauliflowerContainer.appendChild(cauliflowerTextContainer);
-  cauliflowerTextContainer.appendChild(cauliflowerName);
-  cauliflowerTextContainer.appendChild(cauliflowerText);
-  cauliflowerTextContainer.appendChild(cauliflowerPrice);
+  for (let item of menuList) {
+    switch (item) {
+      case 'breakfast':
+      case 'lunch':
+      case 'dinner':
+        window[item + 'Name'] = document.createElement('h1');
+        window[item + 'Name'].innerText = item[0].toUpperCase() + item.slice(1) + ' Menu';
+        window[item + 'Name'].className = 'centered';
+        content.appendChild(window[item + 'Name']);
+        break;
+      default:
+        window[item.name + 'Container'] = document.createElement('div');
+        window[item.name + 'ImgContainer'] = document.createElement('div');
+        window[item.name + 'Img'] = document.createElement('img');
+        window[item.name + 'TextContainer'] = document.createElement('div');
+        window[item.name + 'Name'] = document.createElement('h2');
+        window[item.name + 'Text'] = document.createElement('p');
+        window[item.name + 'Price'] = document.createElement('p');
+        content.appendChild(window[item.name + 'Container']);
+        window[item.name + 'Container'].className = 'menuContainer';
+        window[item.name + 'ImgContainer'].className = 'menuImgContainer';
+        window[item.name + 'Img'].className = 'menuImage';
+        window[item.name + 'TextContainer'].className = 'menuTextContainer';
+        for (let property in item.properties) {
+          window[item.name + property.split('.')[0]][property.split('.')[1]] = item.properties[property];
+        }
+        window[item.name + 'Container'].appendChild(window[item.name + 'ImgContainer']);
+        window[item.name + 'ImgContainer'].appendChild(window[item.name + 'Img']);
+        window[item.name + 'Container'].appendChild(window[item.name + 'TextContainer']);
+        window[item.name + 'TextContainer'].appendChild(window[item.name + 'Name']);
+        window[item.name + 'TextContainer'].appendChild(window[item.name + 'Text']);
+        window[item.name + 'TextContainer'].appendChild(window[item.name + 'Price']);
+    }
+  }
 }
